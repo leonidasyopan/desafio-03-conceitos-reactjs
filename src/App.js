@@ -48,24 +48,26 @@ function App() {
   }
 
   return (
-    <div>
-      <ul data-testid="repository-list">
+    <div class="main-container">
+      <div>
+        <ul data-testid="repository-list">
 
-          { /* This map() method is very interesting. In this case it's allowing us to iterate through each item
-          of our list of repositories. For each item it's creating a List Item (<li>) inside the <ul> */ }
-          {repositories.map(repository => <li key={repository.id}>{repository.title}
-          
-            <button onClick={() => handleRemoveRepository(repository.id)}>
-              Remover
-            </button>
-          
-          </li>)}         
+            { /* This map() method is very interesting. In this case it's allowing us to iterate through each item
+            of our list of repositories. For each item it's creating a List Item (<li>) inside the <ul> */ }
+            {repositories.map(repository => <li key={repository.id}>{repository.title}
+            
+              <button onClick={() => handleRemoveRepository(repository.id)}>
+                Remover
+              </button>
+            
+            </li>)}         
 
+            
           
-        
-      </ul>
+        </ul>
 
-      <button onClick={handleAddRepository}>Adicionar</button>
+        <button onClick={handleAddRepository} class="adicionar">Adicionar</button>
+      </div>
     </div>
     
   );

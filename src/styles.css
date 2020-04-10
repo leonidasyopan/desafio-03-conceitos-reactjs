@@ -5,25 +5,39 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 20px;
+  background: #f5f3ff;
 }
 
-div {
+div.main-container {  
   width: 100%;
-  margin: 20px;
+  height: 80vh;
+  max-width: 960px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-div li {
+div.main-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+div.main-container div li {
   display: flex;
   align-items: center;
 }
 
-div li + li {
+div.main-container div li + li {
   margin-top: 15px;
 }
 
 button {
   background: #7159c1;
+  width: 150px;
   color: #fff;
   border: 0;
   padding: 10px 15px;
@@ -33,7 +47,13 @@ button {
   font-size: 14px;
 }
 
-div li button {
+.adicionar {
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 16px;
+}
+
+div.main-container div li button {
   margin: 0 15px;
   background: #ca4949;
 }
